@@ -2,6 +2,7 @@ h1 {
   color: navy;
   margin-left: 20px;
 }
-body {background-color: paleturquoise;}
+body {background-color: rgb(188, 236, 236);}
 
-img.adel
+#booktitle {color: peru}
+.btn-btn-primary {size: 12}
