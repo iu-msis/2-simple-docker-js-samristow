@@ -16,6 +16,7 @@ th[role=columnheader]:not(.no-sort):after {
 	border-width: 0 4px 4px;
 	border-style: solid;
 	border-color: #404040 transparent;
+
 	visibility: hidden;
 	opacity: 0;
 	-ms-user-select: none;
@@ -31,7 +32,7 @@ th[aria-sort=ascending]:not(.no-sort):after {
 
 th[aria-sort]:not(.no-sort):after {
 	visibility: visible;
-	opacity: 0.4;
+	opacity: 0.5;
 }
 
 th[role=columnheader]:not(.no-sort):hover:after {
