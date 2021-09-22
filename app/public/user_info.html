@@ -77,12 +77,12 @@
     <h1>Random User (HW3)</h1>
   </left>
     <left>
-    <h3>Name: {{ User.name.first }} {{ User.name.last }}</h3>
-    <h3>Country: {{ User.location.country }}</h3>
+    <h3>Name: {{ user.name.first }} {{ user.name.last }}</h3>
+    <h3>Country: {{ user.location.country }}</h3>
     <h3>Birthdate: {{ prettyBirthday }}</h3>
-    <h3>Age: {{ User.dob.age }}</h3>
-    <h3>Email: <a v-bind:href="'mailto'+User.email">{{ User.email}} </a></h3>
-    <img v-bind:src="User.picture.large">
+    <h3>Age: {{ user.dob.age }}</h3>
+    <h3>Email: <a v-bind:href="'mailto'+user.email">{{ user.email}} </a></h3>
+    <img v-bind:src="user.picture.large">
     </left>
 
     
