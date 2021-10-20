@@ -21,7 +21,7 @@ $db = DbConnection::getConnection();
 
 // Step 2: Create & run the query
 $stmt = $db->prepare(
-  'INSERT INTO books ( title, author, publishyr, pgcount, msrp)
+  'INSERT INTO booklist ( title, author, publishyr, pgcount, msrp)
   VALUES (?, ?, ?, ?, ?)'
 );
 
@@ -39,4 +39,4 @@ $stmt->execute([
 
 // Step 4: Output
 header('HTTP/1.1 303 See Other');
-header('Location: ../books/');
+header('Location: ../booklist/');

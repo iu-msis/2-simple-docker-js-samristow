@@ -1,6 +1,8 @@
 <?php
-
+// require 'common.php';
 require 'class/DbConnection.php';
+
+
 
 
 // Step 1: Get a datase connection from our helper class
@@ -11,13 +13,19 @@ $db = DbConnection::getConnection();
 $sql = 'SELECT * FROM books';
 $vars = [];
 
+//if (isset($_GET['books'])) {
+//      This is an example of a parameterized query
+//      $sql = 'SELECT * FROM books WHERE title = ?';
+//      $vars = [ $_GET['books'] ];
+//}
+
 $stmt = $db->prepare($sql);
 $stmt->execute($vars);
 
-$Boolist = $stmt->fetchAll();
+$books = $stmt->fetchAll();
 
 // Step 3: Convert to JSON
-$json = json_encode($Booklist, JSON_PRETTY_PRINT);
+$json = json_encode($books, JSON_PRETTY_PRINT);
 
 // Step 4: Output
 header('Content-Type: application/json');
