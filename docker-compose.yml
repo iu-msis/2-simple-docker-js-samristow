@@ -7,3 +7,6 @@ services:
       - "8080:80"
     volumes:
       - ./app/public:/srv/app/public
+
+  #docker compose up localhost:8080:80/booklist.html
+  
